@@ -5,19 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>jaffer's mentalism</title>
-<script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+<audio id="myaudio">
+<source src="yes.wav" type="audio/wav">
+<source src="yes.mp3" type="audio/mpeg">
+</audio>
 <body>
-    <div class="container">
+<div class="container">
         <h1>mind-blowing</h1>
         <p>Imagin a number between 1 and 63.</p>
-    </div>
-<div class="container">
+</div>
+<div class="container" id="fdiv">
+<button onclick="toggleVisibility()">start</button>
+</div>
+<div class="container" style="display:none;" id="sdiv" >
 <img src="sone.jfif" width="100%" height="auto"></img>
 </div>
-<div class="container">
-
+<div class="container"  style="display:none;" id="tdiv">
+<button>No</button><button>Yes</button>
 </div>
 </body>
+<script>
+ function toggleVisibility() {
+        var div = document.getElementById("sdiv");
+ div.style.display = "block";
+document.getElementById("fdiv").style.display = "none";
+var audio=document.getElementById("myaudio");
+audio.play();
+
+}
+</script>
 </html>
