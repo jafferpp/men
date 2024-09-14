@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <audio id="myaudio">
-<source src="yes.wav" type="audio/wav">
-<source src="yes.mp3" type="audio/mpeg">
+<source src="Yes.wav" type="audio/wav">
+<source src="Yes.mp3" type="audio/mpeg">
 </audio>
 <body>
 <div class="container">
         <h1>mind-blowing</h1>
-        <p>Imagin a number between 1 and 63.</p>
+        <p id="ch">Imagin a number between 1 and 63.</p>
 </div>
 <div class="container" id="fdiv">
 <button onclick="toggleVisibility()">start</button>
@@ -32,6 +32,7 @@
  div.style.display = "block";
 document.getElementById("fdiv").style.display = "none";
 document.getElementById("tdiv").style.display = "block";
+document.getElementById("ch").innerText= "The number is here?";
 var audio=document.getElementById("myaudio");
 audio.play();
 
