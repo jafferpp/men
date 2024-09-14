@@ -48,7 +48,7 @@ var tt = document.getElementById("hidd").innerText;
 document.getElementById("hidd").innerText="";
 tt=Number(tt);tt=tt+1;
 document.getElementById("hidd").innerText = tt;
-document.getElementById("im").src= "s"+tt+".jfif";
+
 if(tt==7)
 {
 document.getElementById("hidd").innerText = "0";
@@ -60,6 +60,7 @@ document.getElementById("tdiv").style.display = "none";
 document.getElementById("ch").innerText= "The number is here?";
     document.getElementById("hidd").innerText = "1";
 }
+    document.getElementById("im").src= "s"+tt+".jfif";
     var audio=document.getElementById("myaudio");
 audio.play();
 }
@@ -69,7 +70,6 @@ var tt = document.getElementById("hidd").innerText;
 document.getElementById("hidd").innerText="";
 tt=Number(tt);tt=tt+1;
 document.getElementById("hidd").innerText = tt;
-document.getElementById("im").src= "s"+tt+".jfif";
 if(tt==7)
 {
 var div = document.getElementById("sdiv");
@@ -79,6 +79,7 @@ document.getElementById("tdiv").style.display = "none";
 document.getElementById("ch").innerText= "The number is here?";
 document.getElementById("hidd").innerText = "1";
 }
+    document.getElementById("im").src= "s"+tt+".jfif";
     var audio=document.getElementById("myaudio2");
 audio.play();
 }
