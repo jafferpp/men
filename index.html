@@ -22,7 +22,7 @@
 <p id="hidd" style="display:none;">1</p>
 </div>
 <div class="container" id="fdiv">
-<button onclick="toggleVisibility()">start</button>
+<button onclick="toggleVisibility()" style="width:100px;">start</button>
 </div>
 <div class="container" style="display:none;" id="sdiv" >
 <img src="s1.jfif" width="100%" height="auto" id="im"></img>
@@ -49,7 +49,7 @@ document.getElementById("hidd").innerText="";
 tt=Number(tt);tt=tt+1;
 document.getElementById("hidd").innerText = tt;
 document.getElementById("im").src= "s"+tt+".jfif";
-if(tt==6)
+if(tt==t)
 {
 document.getElementById("hidd").innerText = "0";
             var div = document.getElementById("sdiv");
@@ -69,11 +69,10 @@ document.getElementById("hidd").innerText="";
 tt=Number(tt);tt=tt+1;
 document.getElementById("hidd").innerText = tt;
 document.getElementById("im").src= "s"+tt+".jfif";
-if(tt==6)
+if(tt==7)
 {
-            var div = document.getElementById("sdiv");
-        div.style.display = "none";
-
+var div = document.getElementById("sdiv");
+div.style.display = "none";
 document.getElementById("fdiv").style.display = "block";
 document.getElementById("tdiv").style.display = "none";
 document.getElementById("ch").innerText= "The number is here?";
