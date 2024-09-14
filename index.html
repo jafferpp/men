@@ -15,27 +15,43 @@
 <div class="container">
         <h1>mind-blowing</h1>
         <p id="ch">Imagin a number between 1 and 63.</p>
+<p id="hidd" style="display:none;">0</p>
 </div>
 <div class="container" id="fdiv">
 <button onclick="toggleVisibility()">start</button>
 </div>
 <div class="container" style="display:none;" id="sdiv" >
-<img src="sone.jfif" width="100%" height="auto"></img>
+<img src="sone.jfif" width="100%" height="auto" id="im"></img>
 </div>
 <div class="container"  style="display:none;" id="tdiv">
-<button>No</button><button>Yes</button>
+<button>No</button><button onclick="rty()">Yes</button>
 </div>
 </body>
 <script>
  function toggleVisibility() {
         var div = document.getElementById("sdiv");
- div.style.display = "block";
+        div.style.display = "block";
+
 document.getElementById("fdiv").style.display = "none";
 document.getElementById("tdiv").style.display = "block";
 document.getElementById("ch").innerText= "The number is here?";
 var audio=document.getElementById("myaudio");
 audio.play();
 
+}
+function rty()
+{
+var tt = document.getElementById("hidd").innerText;
+if (tt==0)
+{
+tt=tt+1;
+document.getElementById("hidd").innerText = tt;
+}
+document.getElementById("im").src= "s"+ tt;
+if(tt==6)
+{
+document.getElementById("hidd").innerText = "0";
+}
 }
 </script>
 </html>
