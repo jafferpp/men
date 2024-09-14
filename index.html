@@ -22,13 +22,13 @@
 <p id="hidd" style="display:none;">1</p>
 </div>
 <div class="container" id="fdiv">
-<button onclick="toggleVisibility()" style="width:100px;">start</button>
+<button onclick="toggleVisibility()" style="width:100px;height:50px;">start</button>
 </div>
 <div class="container" style="display:none;" id="sdiv" >
 <img src="s1.jfif" width="100%" height="auto" id="im"></img>
 </div>
 <div class="container"  style="display:none;" id="tdiv">
-<button onclick="rty2()">No</button><button onclick="rty()">Yes</button>
+<button onclick="rty2()" style="width:100px;height:50px;">No</button><button onclick="rty()"style="width:100px;height:50px;">Yes</button>
 </div>
 </body>
 <script>
@@ -49,7 +49,7 @@ document.getElementById("hidd").innerText="";
 tt=Number(tt);tt=tt+1;
 document.getElementById("hidd").innerText = tt;
 document.getElementById("im").src= "s"+tt+".jfif";
-if(tt==t)
+if(tt==7)
 {
 document.getElementById("hidd").innerText = "0";
             var div = document.getElementById("sdiv");
