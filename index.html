@@ -11,11 +11,15 @@
 <source src="Yes.wav" type="audio/wav">
 <source src="Yes.mp3" type="audio/mpeg">
 </audio>
+    <audio id="myaudio2">
+<source src="No.wav" type="audio/wav">
+<source src="No.mp3" type="audio/mpeg">
+</audio>
 <body>
 <div class="container">
         <h1>mind-blowing</h1>
         <p id="ch">Imagin a number between 1 and 63.</p>
-<p id="hidd" >0</p>
+<p id="hidd" style="display:none;">1</p>
 </div>
 <div class="container" id="fdiv">
 <button onclick="toggleVisibility()">start</button>
@@ -24,7 +28,7 @@
 <img src="s1.jfif" width="100%" height="auto" id="im"></img>
 </div>
 <div class="container"  style="display:none;" id="tdiv">
-<button>No</button><button onclick="rty()">Yes</button>
+<button>No</button onclick="rty2()><button onclick="rty()">Yes</button>
 </div>
 </body>
 <script>
@@ -35,8 +39,7 @@
 document.getElementById("fdiv").style.display = "none";
 document.getElementById("tdiv").style.display = "block";
 document.getElementById("ch").innerText= "The number is here?";
-var audio=document.getElementById("myaudio");
-audio.play();
+
 
 }
 function rty()
@@ -49,7 +52,36 @@ document.getElementById("im").src= "s"+tt+".jfif";
 if(tt==6)
 {
 document.getElementById("hidd").innerText = "0";
+            var div = document.getElementById("sdiv");
+        div.style.display = "none";
+
+document.getElementById("fdiv").style.display = "block";
+document.getElementById("tdiv").style.display = "none";
+document.getElementById("ch").innerText= "The number is here?";
 }
+    var audio=document.getElementById("myaudio");
+audio.play();
 }
+function rty2()
+{
+var tt = document.getElementById("hidd").innerText;
+document.getElementById("hidd").innerText="";
+tt=Number(tt);tt=tt+1;
+document.getElementById("hidd").innerText = tt;
+document.getElementById("im").src= "s"+tt+".jfif";
+if(tt==6)
+{
+            var div = document.getElementById("sdiv");
+        div.style.display = "none";
+
+document.getElementById("fdiv").style.display = "block";
+document.getElementById("tdiv").style.display = "none";
+document.getElementById("ch").innerText= "The number is here?";
+document.getElementById("hidd").innerText = "0";
+}
+    var audio=document.getElementById("myaudio2");
+audio.play();
+}
+
 </script>
 </html>
